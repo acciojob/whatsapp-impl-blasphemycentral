@@ -80,6 +80,7 @@ public class WhatsappController {
         //If user is removed successfully, return (the updated number of users in the group + the updated number of messages in group + the updated number of overall messages)
 
 //        return whatsappService.removeUser(user);
+        return 0;
     }
 
     @GetMapping("/find-messages")
@@ -89,5 +90,6 @@ public class WhatsappController {
         // If the number of messages between given time is less than K, throw "K is greater than the number of messages" exception
 
 //        return whatsappService.findMessage(start, end, K);
+        return "";
     }
 }
