@@ -47,7 +47,8 @@ public class WhatsappRepository {
     {
         if(users.size() == 2)
         {
-            Group group = new Group(users.get(1).getName(), 2, users.get(0).getName());
+            Group group = new Group(users.get(1).getName(), 2);
+            group.setAdmin(users.get(0).getName());
             groupUserMap.put(group, users);
             groupMessageMap.put(group, new ArrayList<>());
             adminMap.put(group, users.get(0));
@@ -55,7 +56,8 @@ public class WhatsappRepository {
         }
         else if(users.size() > 2)
         {
-            Group group = new Group("Group "+ ++customGroupCount, users.size(), users.get(0).getName());
+            Group group = new Group("Group "+ ++customGroupCount, users.size());
+            group.setAdmin(users.get(0).getName());
 //            customGroupCount++;
             groupUserMap.put(group, users);
             groupMessageMap.put(group, new ArrayList<>());

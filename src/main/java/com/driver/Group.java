@@ -5,11 +5,10 @@ public class Group {
     private int numberOfParticipants;
     private String admin;
 
-    public Group(String name, int numberOfParticipants, String admin)
+    public Group(String name, int numberOfParticipants)
     {
         this.name = name;
         this.numberOfParticipants = numberOfParticipants;
-        this.admin = admin;
     }
 
     public String getName()
